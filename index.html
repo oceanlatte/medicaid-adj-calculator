@@ -13,13 +13,15 @@
     <div class="card p-3">
       <div class="form-row">
         <label for="input" class="mr-2">Enter Billed Amount: </label>
-        <input type="text" value="">
+        <input type="text" class="billed-amt">
         <button type="submit" class="btn btn-dark ml-3">Calculate</button>
       </div>
-      <p class="mt-3">Billed Amount: </p>
-      <p>Contractual Adjustment: </p>
-      <p>Expected Allowed: </p>
+      <p class="mt-3">Billed Amount: <span id="dollar-amt"></span></p>
+      <p>Expected Allowed: <span id="expected"></span></p>
+      <p>Contractual Adjustment: <span id="contractual"></span></p>
     </div>
   </div>
+  <script src="./script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dinero.js/1.9.1/dinero.min.js"></script>
 </body>
 </html>
