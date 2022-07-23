@@ -6,19 +6,20 @@ let expectedEl = document.getElementById("expected"); // expected allowed elemen
 function btnHandler(event) {
   event.preventDefault();
   
-  const billedInputEl = document.querySelector(".billed-amt").value; // billed amt input
+  let billedInputEl = document.querySelector(".billed-amt").value; // billed amt input
   billedCalc(billedInputEl);
 }
 
 function billedCalc(amount) {
-  console.log("billed amount input", amount);
-
+  // takes searched amount and prints it to the lower "billed amount" line
   searchedAmountEl.textContent = "$" + amount;
 
+  // take billed amount and prints the expected allowed
   let expAllowed = amount * .0923;
   console.log(amount * .0923);
   expectedEl.textContent = "$" + expAllowed;
 
+  // take billed amount minus expected to get contractual adjustment
   let coAdj = amount - expAllowed;
   contractualEl.textContent = "$" + coAdj;
 }
