@@ -1,3 +1,5 @@
+// const currency = require("currency.js");
+
 const billedSubmitEl = document.querySelector(".btn"); // submit button
 let searchedAmountEl = document.getElementById("dollar-amt"); // searched amount
 let contractualEl = document.getElementById("contractual"); // CO adj element
@@ -16,7 +18,9 @@ function billedCalc(amount) {
 
   // take billed amount and prints the expected allowed
   let expAllowed = amount * .0923;
-  console.log(amount * .0923);
+  console.log(expAllowed);
+  currency(expAllowed).format();
+  console.log(expAllowed)
   expectedEl.textContent = "$" + expAllowed;
 
   // take billed amount minus expected to get contractual adjustment
