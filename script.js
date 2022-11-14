@@ -1,4 +1,5 @@
-// const currency = require("currency.js");
+// const { dinero } = require('dinero.js');
+// const { USD } = require('@dinero.js/currencies');
 
 const billedSubmitEl = document.querySelector(".btn"); // submit button
 let searchedAmountEl = document.getElementById("dollar-amt"); // searched amount
@@ -19,8 +20,10 @@ function billedCalc(amount) {
   // take billed amount and prints the expected allowed
   let expAllowed = amount * .0923;
   console.log(expAllowed);
-  currency(expAllowed).format();
-  console.log(expAllowed)
+
+  // currency(expAllowed).format();
+  // console.log(expAllowed)
+  
   expectedEl.textContent = "$" + expAllowed;
 
   // take billed amount minus expected to get contractual adjustment
